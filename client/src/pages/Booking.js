@@ -4,11 +4,14 @@ import ListBands from '../components/ListBands';
 
 function Booking() {
   return (
-    <div className='container'>
-      <InputBands />
-      <ListBands />
+    <div>
+      <div className='container'>
+        <InputBands />
+        <ListBands />
+      </div>
+
     </div>
   );
 };
 
-export { Booking }
+export { Booking };

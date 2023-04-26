@@ -49,3 +49,6 @@ footer {
   max-width: 1000px;
 }
 
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';

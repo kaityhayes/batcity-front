@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { Route, Routes, Link } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { Upcoming } from './pages/Upcoming';
-
 import { CalendarView } from './pages/CalendarView';
 import { Newsletter } from './pages/Newsletter';
 import { About } from './pages/About';
 import { Booking } from './pages/Booking';
 import './App.css';
+
 
 
 

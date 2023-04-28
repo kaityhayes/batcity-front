@@ -5,11 +5,9 @@ const ListBands = () => {
   const [bands, setBands] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  axios.get('heroku-link.com/api/bands') 
-
   const deleteBands = async (id) => {
     try {
-      const response = await fetch(`http://heroku-link.com/api/bands/${id}`, {
+      const response = await fetch(`https://batcity-back.herokuapp.com/api/bands/${id}`, {
         method: "DELETE",
       });
       if (response.ok) {
@@ -25,7 +23,7 @@ const ListBands = () => {
   const getBands = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch("http://heroku-link.com/api/bands");
+      const response = await fetch("https://batcity-back.herokuapp.com/bands");
       if (response.ok) {
         const jsonData = await response.json();
         setBands(jsonData);
@@ -41,7 +39,7 @@ const ListBands = () => {
   const updateName = async (id, name) => {
     try {
       const body = { name };
-      const response = await fetch(`http://heroku-link.com/api/bands/${id}`, {
+      const response = await fetch(`https://batcity-back.herokuapp.com/bands/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
@@ -57,7 +55,7 @@ const ListBands = () => {
   const updateDate = async (id, date) => {
     try {
       const body = { date };
-      const response = await fetch(`http://heroku-link.com/api/bands/${id}`, {
+      const response = await fetch(`https://batcity-back.herokuapp.com/bands/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),

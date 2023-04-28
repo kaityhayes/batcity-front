@@ -5,10 +5,7 @@ const ListBands = () => {
   const [bands, setBands] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  fetch('http://heroku-link.com/api/bands')
-  .then(response => response.json())
-  .then(data => setBands(data))
-  .catch(error => console.error(error));
+  axios.get('heroku-link.com/api/bands') 
 
   const deleteBands = async (id) => {
     try {

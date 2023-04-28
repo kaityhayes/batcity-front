@@ -14,7 +14,7 @@ const EditBands = ({ bands, setBands }) => {
     try {
       const body = { ...bands, name, date };
       const response = await fetch(
-        `http://heroku-link.com/bands/${bands.bands_id}`,
+        `http://heroku-link.com/api/bands/${bands.bands_id}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },

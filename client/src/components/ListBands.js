@@ -7,7 +7,7 @@ const ListBands = () => {
 
   const deleteBands = async (id) => {
     try {
-      const response = await fetch(`http://heroku-link.com/bands/${id}`, {
+      const response = await fetch(`http://heroku-link.com/api/bands/${id}`, {
         method: "DELETE",
       });
       if (response.ok) {
@@ -23,7 +23,7 @@ const ListBands = () => {
   const getBands = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch("http://heroku-link.com/bands");
+      const response = await fetch("http://heroku-link.com/api/bands");
       if (response.ok) {
         const jsonData = await response.json();
         setBands(jsonData);
@@ -39,7 +39,7 @@ const ListBands = () => {
   const updateName = async (id, name) => {
     try {
       const body = { name };
-      const response = await fetch(`http://heroku-link.com/bands/${id}`, {
+      const response = await fetch(`http://heroku-link.com/api/bands/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
@@ -55,7 +55,7 @@ const ListBands = () => {
   const updateDate = async (id, date) => {
     try {
       const body = { date };
-      const response = await fetch(`http://heroku-link.com/bands/${id}`, {
+      const response = await fetch(`http://heroku-link.com/api/bands/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),

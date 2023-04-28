@@ -9,7 +9,7 @@ const onSubmitForm = async(e) => {
     e.preventDefault();
     try {
         const body = { name, date };
-        const response = await fetch('http://heroku-link.com/bands', {
+        const response = await fetch('http://heroku-link.com/api/bands', {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(body)

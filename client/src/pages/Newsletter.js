@@ -29,7 +29,7 @@ margin-bottom: 20px;
 function Newsletter() {
   return (
     <Container className="d-flex justify-content-center align-items-center" style={{ minHeight: "100vh" }}>
-      <div className="text-center">
+      <div className="text-center"><br /><br />
         <h1 className="mb-5">Subscribe to Our Newsletter</h1>
         <Form>
           <Form.Group controlId="formBasicEmail">

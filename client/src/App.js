@@ -20,7 +20,7 @@ function App() {
 
   return (
     
-    <div style={{ paddingBottom: '100px', backgroundColor: '#EAE8E6' }}>
+    <div style={{ paddingBottom: '100px', backgroundColor: '#DCDCDC' }}>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <Link className="navbar-brand" to="/">Bat City Productions<img src="https://i.imgur.com/xWffzNa.png"></img></Link>
         <button
@@ -74,7 +74,7 @@ function App() {
   </div>
   
   
-  <div style={{ backgroundColor: '#EAE8E6', paddingTop: '0px', paddingBottom: '20px' }}>
+  <div style={{ backgroundColor: '#DCDCDC', paddingTop: '0px', paddingBottom: '20px' }}>
     <div className="container">
       <div className="row">
         <div className="col-12 text-center">

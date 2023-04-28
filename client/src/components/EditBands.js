@@ -14,14 +14,14 @@ const EditBands = ({ bands, setBands }) => {
     try {
       const body = { ...bands, name, date };
       const response = await fetch(
-        `http://localhost:4000/bands/${bands.bands_id}`,
+        `http://heroku-link.com/bands/${bands.bands_id}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(body),
         }
       );
-      window.location = '/'
+      window.location = '/Booking'
       if (response.ok) {
         setBands(
           bands.map((band) =>

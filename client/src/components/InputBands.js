@@ -2,19 +2,19 @@ import React, {Fragment, useState} from 'react'
 
 const InputBands = () => {
 
-const [name, setName] = useState('name')
-const [date, setDate] = useState('date')
+const [name, setName] = useState('Enter band name')
+const [date, setDate] = useState('Enter date touring')
 
 const onSubmitForm = async(e) => {
     e.preventDefault();
     try {
         const body = { name, date };
-        const response = await fetch('http://localhost:4000/bands', {
+        const response = await fetch('http://heroku-link.com/bands', {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(body)
         });
-        window.location = '/'  //refreshes page when new data is added so that new data is shown
+        window.location = '/Booking'  //refreshes page when new data is added so that new data is shown
     } catch (error) {
         console.error(error.message); 
     }
@@ -22,15 +22,27 @@ const onSubmitForm = async(e) => {
 
 
     return (
-    <Fragment>
-        <h1 className='text-center mt-5'>Submit Bands for Booking</h1>
-        <form className='d-flex mt-5' onSubmit={onSubmitForm}>
-        <input type="text" className="form-control" value={name} onChange={(e) => setName(e.target.value)}/>
-        <br />
-        <input text='text' className='form-control' value={date} onChange={(e) => setDate(e.target.value)}/>
-        <button className='btn btn-success'>Add</button>
-        </form>
-    </Fragment>
+<Fragment>
+    <br />
+  <div className="container d-flex justify-content-center align-items-center vh-100">
+    <div className="card p-5">
+      <h1 className="text-center mb-4">Submit Bands for Booking</h1>
+      <form onSubmit={onSubmitForm}>
+        <div className="form-group">
+          <input type="text" className="form-control" value={name} onChange={(e) => setName(e.target.value)} />
+        </div>
+        <div className="form-group">
+          <input type="text" className="form-control" value={date} onChange={(e) => setDate(e.target.value)} />
+        </div>
+        <button type="submit" className="btn btn-primary">Add</button>
+      </form>
+    </div>
+  </div>
+</Fragment>
+
+
+
+    
     ) 
 }
 

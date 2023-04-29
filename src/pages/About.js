@@ -3,6 +3,7 @@ import React from 'react';
 function About() {
   return (
     <div className='container'>
+      <br />
     <div className="text-center">
       <div className="jumbotron">
         <h1 className="display-4">About Us</h1>

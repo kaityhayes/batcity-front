@@ -9,8 +9,6 @@ import { Booking } from './pages/Booking';
 import './App.css';
 
 
-
-
 function App() {
   const [collapsed, setCollapsed] = useState(true);
 

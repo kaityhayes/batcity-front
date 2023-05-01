@@ -10,8 +10,6 @@ const CalendarView = () => {
   const localizer = momentLocalizer(moment);
   const [events, setEvents] = useState([]);
 
-  
-
   useEffect(() => {
     const data = [
       {

@@ -16,6 +16,7 @@ function App() {
     setCollapsed(!collapsed);
   };
 
+  
   return (
     
     <div style={{ paddingBottom: '100px', backgroundColor: '#DCDCDC' }}>

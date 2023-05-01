@@ -14,7 +14,7 @@ const EditBands = ({ bands, setBands }) => {
     try {
       const body = { ...bands, name, date };
       const response = await fetch(
-        `https://batcity-back.herokuapp.com/bands/${bands.bands_id}`,
+        `http://localhost:4000/bands/${bands.bands_id}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },

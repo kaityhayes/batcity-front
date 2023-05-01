@@ -31,7 +31,7 @@ function Home() {
               className="d-block mx-auto"
               src={imageUrl}
               alt="Slide"
-              style={{ maxWidth: '100%', maxHeight: '600px' }}
+              style={{ maxWidth: '100%', maxHeight: '500px' }}
             />
           </Carousel.Item>
         ))}

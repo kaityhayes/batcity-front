@@ -9,7 +9,7 @@ const onSubmitForm = async(e) => {
     e.preventDefault();
     try {
         const body = { name, date };
-        const response = await fetch('https://batcity-back.herokuapp.com/bands', {
+        const response = await fetch('http://localhost:4000/bands', {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(body)
